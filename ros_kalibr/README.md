@@ -304,10 +304,6 @@ IMU0:
 ## Contribution
 -->
 
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
 ## Author
 
 [tmako123](https://github.com/tmako123/)

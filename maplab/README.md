@@ -1,7 +1,12 @@
 DockerFile of MAPLAB + RealSenseSDK
 ====
 
-MAPLAB use RealSense t265.
+MAPLAB use RealSense t265.  
+
+MAPLAB  
+https://github.com/ethz-asl/maplab  
+RealSenseSDK  
+https://github.com/IntelRealSense/librealsense
 
 <!--
 ## Description
@@ -127,10 +132,6 @@ $ rosrun rviz rviz -d /mnt/share/param/t265/rovio.rviz
 <!--
 ## Contribution
 -->
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
 
 ## Author
 
