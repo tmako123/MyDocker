@@ -1,0 +1,28 @@
+label: "t265_calibration"
+id: 412eab8e4058621f7036b5e765dfe812
+cameras:
+- camera:
+    label: camera/fisheye1
+    id: 54812562fa109c40fe90b29a59dd7798
+    line-delay-nanoseconds: 0
+    image_height: 800
+    image_width: 848
+    type: pinhole
+    intrinsics:
+      cols: 1
+      rows: 4
+      data: [288.6819700148808, 284.87056764099316, 420.20986131934535, 402.7797045021024]
+    distortion:
+      type: equidistant
+      parameters:
+        cols: 1
+        rows: 4
+        data: [-0.005477013337796245, 0.05067263597233775, -0.05055290656828977,
+    0.010381072290273024]
+  T_B_C:
+    cols: 4
+    rows: 4
+    data: [-0.99995955, -0.00694458,  0.00571579,  0.01667597,
+0.00691062, -0.99995847, -0.00594143,  0.00800261,
+0.00575681, -0.00590169,  0.99996601,  0.007587,
+ 0.       ,   0.       ,   0.       ,   1.        ]
