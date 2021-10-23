@@ -16,5 +16,14 @@ touch minkindr/minkindr_python/CATKIN_IGNORE && \
 cd rpg_svo_pro_open/svo_online_loopclosing/vocabularies && ./download_voc.sh && \
 cd ../../..
 
+RUN cd svo_ws/src && \
+rm rpg_svo_pro_open/svo_global_map/CATKIN_IGNORE && \
+sed 'a SET(USE_GLOBAL_MAP TRUE)' rpg_svo_pro_open/svo_cmake/cmake/Modules/SvoSetup.cmake
+
+RUN cd svo_ws/src && \
+git clone --branch 4.0.3 http://github.com/borglab/gtsam.git && \
+sed -i 's/use the one bundled with GTSAM" OFF)/use the one bundled with GTSAM" ON)/g' ./gtsam/CMakeLists.txt && \
+sed -i 's/list_append_cache(GTSAM_COMPILE_OPTIONS_PUBLIC "-march=native")`/list_append_cache(GTSAM_COMPILE_OPTIONS_PUBLIC "-march=native")`\\nlist_append_cache(GTSAM_COMPILE_OPTIONS_PUBLIC "-mno-avx")/g' ./gtsam/cmake/GtsamBuildTypes.cmake
+
 RUN cd svo_ws && \
 catkin build
